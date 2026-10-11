@@ -28,7 +28,7 @@ class DemoTests(unittest.TestCase):
         self.tmp.cleanup()
 
     def test_navigation_and_configuration(self):
-        """四页可访问，模型与密钥只能从文件配置。"""
+        """普通页面不展示密钥配置，开发者模式可主动测试连接。"""
         app=self.app
         self.assertEqual(len(app.radio),0)
         self.assertTrue(all(any(b.key=='nav_'+n for b in app.button) for n in ['首页','聊天','记忆','我们','设置']))

@@ -12,10 +12,16 @@ from ui_components import apply_style, brand, hero, greeting, memory_meta, AVATA
 
 st.set_page_config(page_title='MOMO · 慢慢说，我听着',page_icon='🌿',layout='centered',initial_sidebar_state='collapsed')
 
-@st.cache_resource
 def startup_config():
-    """每次服务启动读取一次本地配置；切换模型或更换密钥后需重启服务。"""
-    return load_config()
+    """仅在调用模型时解析本次会话密钥或本地配置，不跨会话缓存凭据。"""
+    override=st.session_state.get('session_api_key','').strip()
+    config=load_config(api_key_override=override) if override else load_config()
+    st.session_state.last_model=config.model
+    return config
+
+def remember_session_key():
+    """保留会话输入，切换页面或隐藏开发者模式时不丢失；清空即回退本地。"""
+    st.session_state.session_api_key=st.session_state.developer_api_key.strip()
 
 store=MemoryStore(Path(__file__).parent/'data'/'momo.db')
 for key,value in {'user_id':'local-single-tester','messages':[],'declined':False,'latched':False,
@@ -36,13 +42,6 @@ if revision!=st.session_state.memory_revision:
     st.session_state.memory_revision=revision
     st.session_state.memory_plans=[]
     st.session_state.pending_items=[]
-
-config=None
-config_error=None
-try:
-    config=startup_config()
-except ModelAPIError as exc:
-    config_error=str(exc)
 
 GROUPS=[('Identity','关于你'),('Episodic','最近的事'),('Relationship','共同经历'),('Preference','相处偏好')]
 
@@ -164,10 +163,15 @@ with st.container(key='momo_nav'):
 page=st.session_state.ui_page
 if debug:
     with st.expander('开发者调试面板',expanded=True):
-        st.caption('本机单人测试 · 当前模型：'+(config.model if config else '未配置'))
-        if config and st.button('测试连接（普通回复 + 分类 JSON）'):
-            client=AliyunLLM(config)
-            try: st.success(str(client.check_connection()))
+        st.caption('最近调用模型：'+st.session_state.get('last_model','尚未调用'))
+        if 'developer_api_key' not in st.session_state:
+            st.session_state.developer_api_key=st.session_state.get('session_api_key','')
+        st.text_input('本次会话 API Key',type='password',key='developer_api_key',on_change=remember_session_key)
+        st.caption('输入后按回车生效；本次会话优先使用，清空后读取本地配置。不会写入文件；隐藏开发者模式后仍有效。')
+        if st.button('测试连接（普通回复 + 分类 JSON）'):
+            try:
+                client=AliyunLLM(startup_config())
+                st.success(str(client.check_connection()))
             except ModelAPIError as exc: st.error(str(exc))
         state=st.session_state.state
         if state: st.json(state)
@@ -340,8 +344,6 @@ if page=='首页':
 
 st.title('和 MOMO 聊聊')
 st.caption('慢慢说，我听着。')
-if config_error:
-    st.error(config_error)
 for message in st.session_state.messages:
     with st.chat_message(message['role'],avatar=AVATAR if message['role']=='assistant' else None):
         if message['role']=='user': user_marker()
@@ -399,7 +401,7 @@ if st.session_state.action and not st.session_state.latched:
             st.session_state.action_started=False
             st.rerun()
 
-text=st.chat_input('今天想和 MOMO 说些什么？',max_chars=4000,disabled=config is None)
+text=st.chat_input('今天想和 MOMO 说些什么？',max_chars=4000)
 submitted_action=bool(st.session_state.action_submission)
 if submitted_action:
     text=st.session_state.action_submission
@@ -411,6 +413,11 @@ if text and text.strip():
     with st.chat_message('user'):
         user_marker()
         st.write(text)
+    try:
+        config=startup_config()
+    except ModelAPIError:
+        st.error('无法加载模型配置。请在开发者模式填写本次会话 API Key，或补全本地 config.local.toml 后重新发送。')
+        st.stop()
     with st.chat_message('assistant',avatar=AVATAR):
         output=st.empty()
         output.caption('正在回应…')

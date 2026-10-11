@@ -50,10 +50,21 @@ class LLMConfig(BaseModel):
     timeout_seconds: int = Field(default=90, ge=10, le=180)
     max_completion_tokens: int = Field(default=12288, ge=1024, le=32768)
 
-def load_config(path=CONFIG_PATH):
-    """读取 Path/str 配置路径并返回 LLMConfig；缺失或无效时抛出脱敏错误，不联网。"""
+def load_config(path=CONFIG_PATH, api_key_override=None):
+    """调用前读取配置；会话密钥优先，缺少本地文件时使用无密钥示例的模型参数。
+
+    api_key_override 为当前会话输入，不写入文件；空白时仍要求本地配置有效。
+    返回校验后的 LLMConfig；所有配置异常均脱敏，不联网。
+    """
     try:
-        config = LLMConfig.model_validate(tomllib.loads(Path(path).read_text(encoding='utf-8')))
+        override=(api_key_override or '').strip()
+        source=Path(path)
+        if override and not source.exists():
+            source=ROOT/'config.example.toml'
+        data=tomllib.loads(source.read_text(encoding='utf-8'))
+        if override:
+            data['api_key']=override
+        config = LLMConfig.model_validate(data)
         parts = urlsplit(config.base_url)
         if config.model not in SUPPORTED_MODELS:
             raise ModelAPIError('模型名称不在四个已适配模型中，请检查 config.local.toml。')
