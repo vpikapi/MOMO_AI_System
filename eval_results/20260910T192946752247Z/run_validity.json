@@ -1,0 +1,23 @@
+{
+  "status": "COMPLETED_WITH_PRODUCT_FAILURES",
+  "model": "qwen3.8-flash",
+  "previous_model": "kimi-k3",
+  "production_identical_to_previous_v2": true,
+  "dataset_identical_to_previous_v2": true,
+  "v1_unchanged": true,
+  "full_evaluation_executed": true,
+  "product_acceptance_passed": false,
+  "human_scores_status": "PENDING",
+  "unscorable_persona_cases": [
+    "per-018"
+  ],
+  "memory_call_degraded_cases": [
+    "per-016",
+    "mic-017"
+  ],
+  "failed_call_note": "2 次 memory 调用 status=failed，记录未含 http_status，不能认定为免费额度或特定 HTTP 故障",
+  "priority_one": [
+    "mem-018 敏感确认未阻止保存"
+  ],
+  "switch_note": "仅配置切换模型，业务代码与提示词未按本轮输出修改"
+}

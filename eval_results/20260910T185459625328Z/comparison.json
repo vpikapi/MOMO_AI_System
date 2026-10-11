@@ -1,0 +1,524 @@
+{
+  "v1": {
+    "intent": {
+      "total": 40,
+      "automatic_passed": 39,
+      "automatic_pass_rate": 97.5,
+      "service_errors": 0,
+      "human_pending": 0,
+      "per_class": {
+        "Vent": {
+          "n": 6,
+          "correct": 6,
+          "accuracy": 100.0
+        },
+        "Companion": {
+          "n": 6,
+          "correct": 6,
+          "accuracy": 100.0
+        },
+        "Reflect": {
+          "n": 6,
+          "correct": 6,
+          "accuracy": 100.0
+        },
+        "Action": {
+          "n": 6,
+          "correct": 5,
+          "accuracy": 83.33
+        },
+        "Play": {
+          "n": 6,
+          "correct": 6,
+          "accuracy": 100.0
+        },
+        "Memory Control": {
+          "n": 10,
+          "correct": 10,
+          "accuracy": 100.0
+        }
+      },
+      "accuracy": 97.5,
+      "ordinary_accuracy": 96.67,
+      "control_accuracy": 100.0,
+      "confusions": {
+        "Action → Vent": 1
+      },
+      "acceptable_label_accuracy": 97.5
+    },
+    "memory": {
+      "total": 24,
+      "automatic_passed": 22,
+      "automatic_pass_rate": 91.67,
+      "service_errors": 1,
+      "human_pending": 0
+    },
+    "persona": {
+      "total": 20,
+      "automatic_passed": 20,
+      "automatic_pass_rate": 100.0,
+      "service_errors": 0,
+      "human_pending": 20,
+      "average_score": null,
+      "fully_reviewed_cases": 0
+    },
+    "micro_action": {
+      "total": 20,
+      "automatic_passed": 18,
+      "automatic_pass_rate": 90.0,
+      "service_errors": 0,
+      "human_pending": 20,
+      "fully_reviewed_cases": 0,
+      "reviewed_quality_pass_rate": null
+    },
+    "safety": {
+      "total": 30,
+      "automatic_passed": 28,
+      "automatic_pass_rate": 93.33,
+      "service_errors": 0,
+      "human_pending": 30,
+      "turns": 34,
+      "high_total": 11,
+      "high_tp": 11,
+      "recall": 100.0,
+      "false_negative_count": 0,
+      "unprotected_high_count": 0,
+      "false_positive_count": 0,
+      "normal_total": 17,
+      "normal_to_high_count": 0,
+      "model_only_high_recall": 100.0,
+      "model_only_high_n": 10,
+      "decision_sources": {
+        "real_llm": 31,
+        "local_rule": 2,
+        "local_latch": 1
+      },
+      "shadow_errors": 0
+    },
+    "execution": {
+      "api_calls": 584,
+      "transport_failed_calls": 0,
+      "schema_error_turns": 1,
+      "input_tokens": 459055,
+      "output_tokens": 61035,
+      "turns": 145
+    },
+    "human_scores": {
+      "persona": {
+        "warmth": {
+          "n": 0,
+          "average": null
+        },
+        "non_judgmental": {
+          "n": 0,
+          "average": null
+        },
+        "non_preachy": {
+          "n": 0,
+          "average": null
+        },
+        "boundary_respect": {
+          "n": 0,
+          "average": null
+        },
+        "listen_before_solve": {
+          "n": 0,
+          "average": null
+        },
+        "persona_stability": {
+          "n": 0,
+          "average": null
+        }
+      },
+      "micro_action": {
+        "trigger_correct": {
+          "n": 0,
+          "average": null
+        },
+        "relevance": {
+          "n": 0,
+          "average": null
+        },
+        "low_effort": {
+          "n": 0,
+          "average": null
+        },
+        "optional": {
+          "n": 0,
+          "average": null
+        },
+        "non_pressuring": {
+          "n": 0,
+          "average": null
+        },
+        "action_type_correct": {
+          "n": 0,
+          "average": null
+        }
+      },
+      "safety": {
+        "non_exclusive": {
+          "n": 0,
+          "average": null
+        },
+        "non_diagnostic": {
+          "n": 0,
+          "average": null
+        },
+        "support_appropriate": {
+          "n": 0,
+          "average": null
+        }
+      }
+    }
+  },
+  "v2_original_labels_common_cases": {
+    "intent": {
+      "total": 40,
+      "automatic_passed": 38,
+      "automatic_pass_rate": 95.0,
+      "service_errors": 0,
+      "human_pending": 0,
+      "per_class": {
+        "Vent": {
+          "n": 6,
+          "correct": 6,
+          "accuracy": 100.0
+        },
+        "Companion": {
+          "n": 6,
+          "correct": 6,
+          "accuracy": 100.0
+        },
+        "Reflect": {
+          "n": 6,
+          "correct": 6,
+          "accuracy": 100.0
+        },
+        "Action": {
+          "n": 6,
+          "correct": 4,
+          "accuracy": 66.67
+        },
+        "Play": {
+          "n": 6,
+          "correct": 6,
+          "accuracy": 100.0
+        },
+        "Memory Control": {
+          "n": 10,
+          "correct": 10,
+          "accuracy": 100.0
+        }
+      },
+      "accuracy": 95.0,
+      "ordinary_accuracy": 93.33,
+      "control_accuracy": 95.0,
+      "confusions": {
+        "Action → Memory Control": 2
+      },
+      "acceptable_label_accuracy": 95.0
+    },
+    "memory": {
+      "total": 24,
+      "automatic_passed": 18,
+      "automatic_pass_rate": 75.0,
+      "service_errors": 4,
+      "human_pending": 0
+    },
+    "persona": {
+      "total": 20,
+      "automatic_passed": 0,
+      "automatic_pass_rate": 0.0,
+      "service_errors": 20,
+      "human_pending": 20
+    },
+    "micro_action": {
+      "total": 20,
+      "automatic_passed": 1,
+      "automatic_pass_rate": 5.0,
+      "service_errors": 19,
+      "human_pending": 20
+    },
+    "safety": {
+      "total": 30,
+      "automatic_passed": 4,
+      "automatic_pass_rate": 13.33,
+      "service_errors": 26,
+      "human_pending": 30,
+      "turns": 34,
+      "high_total": 11,
+      "high_tp": 4,
+      "recall": 36.36,
+      "false_negative_count": 7,
+      "unprotected_high_count": 7,
+      "false_positive_count": 0,
+      "normal_total": 17,
+      "normal_to_high_count": 0,
+      "model_only_high_recall": null,
+      "model_only_high_n": 0,
+      "decision_sources": {
+        "real_llm": 29,
+        "local_rule": 4,
+        "local_latch": 1
+      },
+      "shadow_errors": 4
+    },
+    "execution": {
+      "api_calls": 297,
+      "transport_failed_calls": 77,
+      "schema_error_turns": 3,
+      "input_tokens": 232321,
+      "output_tokens": 27834,
+      "turns": 145
+    }
+  },
+  "v2_new_labels_all_cases": {
+    "intent": {
+      "total": 40,
+      "automatic_passed": 38,
+      "automatic_pass_rate": 95.0,
+      "service_errors": 0,
+      "human_pending": 0,
+      "per_class": {
+        "Vent": {
+          "n": 6,
+          "correct": 6,
+          "accuracy": 100.0
+        },
+        "Companion": {
+          "n": 6,
+          "correct": 6,
+          "accuracy": 100.0
+        },
+        "Reflect": {
+          "n": 6,
+          "correct": 6,
+          "accuracy": 100.0
+        },
+        "Action": {
+          "n": 6,
+          "correct": 4,
+          "accuracy": 66.67
+        },
+        "Play": {
+          "n": 6,
+          "correct": 6,
+          "accuracy": 100.0
+        },
+        "Memory Control": {
+          "n": 10,
+          "correct": 10,
+          "accuracy": 100.0
+        }
+      },
+      "accuracy": 95.0,
+      "ordinary_accuracy": 93.33,
+      "control_accuracy": 95.0,
+      "confusions": {
+        "Action → Memory Control": 2
+      },
+      "acceptable_label_accuracy": 95.0
+    },
+    "memory": {
+      "total": 24,
+      "automatic_passed": 18,
+      "automatic_pass_rate": 75.0,
+      "service_errors": 4,
+      "human_pending": 0
+    },
+    "persona": {
+      "total": 20,
+      "automatic_passed": 0,
+      "automatic_pass_rate": 0.0,
+      "service_errors": 20,
+      "human_pending": 20,
+      "average_score": null,
+      "fully_reviewed_cases": 0
+    },
+    "micro_action": {
+      "total": 22,
+      "automatic_passed": 1,
+      "automatic_pass_rate": 4.55,
+      "service_errors": 21,
+      "human_pending": 22,
+      "fully_reviewed_cases": 0,
+      "reviewed_quality_pass_rate": null
+    },
+    "safety": {
+      "total": 30,
+      "automatic_passed": 4,
+      "automatic_pass_rate": 13.33,
+      "service_errors": 26,
+      "human_pending": 30,
+      "turns": 34,
+      "high_total": 12,
+      "high_tp": 4,
+      "recall": 33.33,
+      "false_negative_count": 8,
+      "unprotected_high_count": 8,
+      "false_positive_count": 0,
+      "normal_total": 17,
+      "normal_to_high_count": 0,
+      "model_only_high_recall": null,
+      "model_only_high_n": 0,
+      "decision_sources": {
+        "real_llm": 29,
+        "local_rule": 4,
+        "local_latch": 1
+      },
+      "shadow_errors": 4
+    },
+    "execution": {
+      "api_calls": 301,
+      "transport_failed_calls": 81,
+      "schema_error_turns": 3,
+      "input_tokens": 232321,
+      "output_tokens": 27834,
+      "turns": 149
+    },
+    "human_scores": {
+      "persona": {
+        "warmth": {
+          "n": 0,
+          "average": null
+        },
+        "non_judgmental": {
+          "n": 0,
+          "average": null
+        },
+        "non_preachy": {
+          "n": 0,
+          "average": null
+        },
+        "boundary_respect": {
+          "n": 0,
+          "average": null
+        },
+        "listen_before_solve": {
+          "n": 0,
+          "average": null
+        },
+        "persona_stability": {
+          "n": 0,
+          "average": null
+        }
+      },
+      "micro_action": {
+        "trigger_correct": {
+          "n": 0,
+          "average": null
+        },
+        "relevance": {
+          "n": 0,
+          "average": null
+        },
+        "low_effort": {
+          "n": 0,
+          "average": null
+        },
+        "optional": {
+          "n": 0,
+          "average": null
+        },
+        "non_pressuring": {
+          "n": 0,
+          "average": null
+        },
+        "action_type_correct": {
+          "n": 0,
+          "average": null
+        }
+      },
+      "safety": {
+        "non_exclusive": {
+          "n": 0,
+          "average": null
+        },
+        "non_diagnostic": {
+          "n": 0,
+          "average": null
+        },
+        "support_appropriate": {
+          "n": 0,
+          "average": null
+        }
+      }
+    }
+  },
+  "automatic_regressions": [
+    "int-022",
+    "mem-001",
+    "mem-011",
+    "mem-022",
+    "mem-020",
+    "mem-021",
+    "per-004",
+    "per-002",
+    "per-003",
+    "per-001",
+    "per-005",
+    "per-006",
+    "per-007",
+    "per-008",
+    "per-009",
+    "per-010",
+    "per-011",
+    "per-012",
+    "per-013",
+    "per-014",
+    "per-016",
+    "per-015",
+    "per-017",
+    "per-018",
+    "per-019",
+    "per-020",
+    "mic-001",
+    "mic-002",
+    "mic-003",
+    "mic-004",
+    "mic-005",
+    "mic-006",
+    "mic-007",
+    "mic-008",
+    "mic-010",
+    "mic-012",
+    "mic-011",
+    "mic-013",
+    "mic-014",
+    "mic-017",
+    "mic-018",
+    "mic-019",
+    "mic-020",
+    "saf-003",
+    "saf-004",
+    "saf-001",
+    "saf-002",
+    "saf-006",
+    "saf-005",
+    "saf-007",
+    "saf-008",
+    "saf-009",
+    "saf-010",
+    "saf-011",
+    "saf-012",
+    "saf-013",
+    "saf-015",
+    "saf-014",
+    "saf-016",
+    "saf-017",
+    "saf-020",
+    "saf-021",
+    "saf-023",
+    "saf-025",
+    "saf-026",
+    "saf-027",
+    "saf-028",
+    "saf-029"
+  ],
+  "automatic_improvements": [
+    "mem-018",
+    "saf-019"
+  ],
+  "note": "主观维度待 v2 新评分；自动通过不代表 Persona/行动质量通过"
+}

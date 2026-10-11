@@ -1,0 +1,27 @@
+{
+  "properties": {
+    "intent": {
+      "enum": [
+        "Vent",
+        "Companion",
+        "Reflect",
+        "Action",
+        "Play"
+      ],
+      "title": "Intent",
+      "type": "string"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Confidence",
+      "type": "number"
+    }
+  },
+  "required": [
+    "intent",
+    "confidence"
+  ],
+  "title": "IntentResult",
+  "type": "object"
+}

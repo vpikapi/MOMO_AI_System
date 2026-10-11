@@ -1,0 +1,167 @@
+{
+  "intent": {
+    "total": 0,
+    "automatic_passed": 0,
+    "automatic_pass_rate": null,
+    "service_errors": 0,
+    "human_pending": 0,
+    "per_class": {
+      "Vent": {
+        "n": 0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "Companion": {
+        "n": 0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "Reflect": {
+        "n": 0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "Action": {
+        "n": 0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "Play": {
+        "n": 0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "Memory Control": {
+        "n": 0,
+        "correct": 0,
+        "accuracy": null
+      }
+    },
+    "accuracy": null,
+    "ordinary_accuracy": null,
+    "control_accuracy": null,
+    "confusions": {},
+    "acceptable_label_accuracy": null
+  },
+  "memory": {
+    "total": 0,
+    "automatic_passed": 0,
+    "automatic_pass_rate": null,
+    "service_errors": 0,
+    "human_pending": 0
+  },
+  "persona": {
+    "total": 0,
+    "automatic_passed": 0,
+    "automatic_pass_rate": null,
+    "service_errors": 0,
+    "human_pending": 0,
+    "average_score": null,
+    "fully_reviewed_cases": 0
+  },
+  "micro_action": {
+    "total": 10,
+    "automatic_passed": 10,
+    "automatic_pass_rate": 100.0,
+    "service_errors": 0,
+    "human_pending": 10,
+    "fully_reviewed_cases": 0,
+    "reviewed_quality_pass_rate": null
+  },
+  "safety": {
+    "total": 0,
+    "automatic_passed": 0,
+    "automatic_pass_rate": null,
+    "service_errors": 0,
+    "human_pending": 0,
+    "turns": 0,
+    "high_total": 0,
+    "high_tp": 0,
+    "recall": null,
+    "false_negative_count": 0,
+    "unprotected_high_count": 0,
+    "false_positive_count": 0,
+    "normal_total": 0,
+    "normal_to_high_count": 0,
+    "model_only_high_recall": null,
+    "model_only_high_n": 0,
+    "decision_sources": {},
+    "shadow_errors": 0
+  },
+  "execution": {
+    "api_calls": 76,
+    "transport_failed_calls": 0,
+    "schema_error_turns": 0,
+    "input_tokens": 61433,
+    "output_tokens": 3202,
+    "turns": 12
+  },
+  "human_scores": {
+    "persona": {
+      "warmth": {
+        "n": 0,
+        "average": null
+      },
+      "non_judgmental": {
+        "n": 0,
+        "average": null
+      },
+      "non_preachy": {
+        "n": 0,
+        "average": null
+      },
+      "boundary_respect": {
+        "n": 0,
+        "average": null
+      },
+      "listen_before_solve": {
+        "n": 0,
+        "average": null
+      },
+      "persona_stability": {
+        "n": 0,
+        "average": null
+      }
+    },
+    "micro_action": {
+      "trigger_correct": {
+        "n": 0,
+        "average": null
+      },
+      "relevance": {
+        "n": 0,
+        "average": null
+      },
+      "low_effort": {
+        "n": 0,
+        "average": null
+      },
+      "optional": {
+        "n": 0,
+        "average": null
+      },
+      "non_pressuring": {
+        "n": 0,
+        "average": null
+      },
+      "action_type_correct": {
+        "n": 0,
+        "average": null
+      }
+    },
+    "safety": {
+      "non_exclusive": {
+        "n": 0,
+        "average": null
+      },
+      "non_diagnostic": {
+        "n": 0,
+        "average": null
+      },
+      "support_appropriate": {
+        "n": 0,
+        "average": null
+      }
+    }
+  }
+}

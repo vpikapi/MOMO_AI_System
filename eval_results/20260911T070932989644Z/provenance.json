@@ -1,0 +1,24 @@
+{
+  "review_source_sha256": "26a913456960e86faf73f4a9a8ec722b929847e8aebe711d5cd37dd8e2e35db7",
+  "review_archive_sha256": "26a913456960e86faf73f4a9a8ec722b929847e8aebe711d5cd37dd8e2e35db7",
+  "v1_frozen_files_unchanged": true,
+  "original_cases_unchanged": true,
+  "source_review_not_independent_human": true,
+  "v2_baseline_hashes": {
+    "comparison.json": "1571d789ee952b141e3e8509fc27bcea931992708e412bd63c3104c5ca1eeeb2",
+    "eval_v2_20260910T192946752247Z.json": "2c48b8b3d3ce50c2d8d38b4e6ac271aa43ff68ac7b4bc803c6855fe58c79d0aa",
+    "events.jsonl": "7e4dac7c6dfa7ae6817d069bb1da5bc32e50d2d2d3b9ca2e6c5fc600652dc504",
+    "failures.jsonl": "27d4e1ef2f8c57b02eee9b1d0132be741687ba5839cba542d200726a4ec08bf8",
+    "graded_results.jsonl": "659b69efd03b48bdc1005805092ea7a7fb45197b16aa1a52575cc10a00adf48f",
+    "human_scores.csv": "1d017823c3e748a0d396b15147a0362b006a3079c98033bb40c58101737e9f81",
+    "human_scores_v2_pending.csv": "25163016d3bb9b69722081bef7f9e4cba645ca76463578b0aa88cb70831876cf",
+    "metadata.json": "7fda85613e1612d84c9eb42834d2581bf9dee902bc12e8cfa8af492f5591e95e",
+    "metrics.json": "7e8ba717a95fae51dcc4d608ce5145b676f42d8554e391c387288ab1aaabc232",
+    "Qwen补充验收结论.md": "483edbe941e1dd1ca38110a134f9e61dc269c282065f73c7fc739fdb01db7ccc",
+    "results.jsonl": "58a0c76ac8013109ac2b65d28182bee2dd81e51fa273a85fcfad8fa16fd33bf7",
+    "run_validity.json": "628032cc1f024dab14472735e052ce206baba3b81a54ea1cded9c9270e7de18e",
+    "summary.md": "322c3e074307951db0ea42fb9755d28cd63204236d87e298507345ab03c830ff",
+    "v1_vs_v2.md": "3224bc10feda0a62c2debda9dca247ee49a9dbe8305df0d7457aa1c451597bc1"
+  },
+  "new_scores_all_blank": true
+}

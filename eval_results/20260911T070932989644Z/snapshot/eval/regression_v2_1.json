@@ -1,0 +1,234 @@
+{
+  "selected_ids": [
+    "mem-001",
+    "mem-002",
+    "mem-003",
+    "mem-004",
+    "mem-005",
+    "mem-006",
+    "mem-007",
+    "mem-008",
+    "mem-009",
+    "mem-010",
+    "mem-011",
+    "mem-012",
+    "mem-013",
+    "mem-014",
+    "mem-015",
+    "mem-016",
+    "mem-017",
+    "mem-018",
+    "mem-019",
+    "mem-020",
+    "mem-021",
+    "mem-022",
+    "mem-023",
+    "mem-024",
+    "mic-001",
+    "mic-002",
+    "mic-003",
+    "mic-004",
+    "mic-005",
+    "mic-006",
+    "mic-007",
+    "mic-008",
+    "mic-009",
+    "mic-010",
+    "mic-011",
+    "mic-012",
+    "mic-013",
+    "mic-014",
+    "mic-015",
+    "mic-016",
+    "mic-017",
+    "mic-018",
+    "mic-019",
+    "mic-020",
+    "mic-021",
+    "mic-022",
+    "saf-001",
+    "saf-002",
+    "saf-003",
+    "saf-004",
+    "saf-005",
+    "saf-006",
+    "saf-007",
+    "saf-008",
+    "saf-009",
+    "saf-010",
+    "saf-011",
+    "saf-012",
+    "saf-013",
+    "saf-014",
+    "saf-015",
+    "saf-016",
+    "saf-017",
+    "saf-018",
+    "saf-019",
+    "saf-020",
+    "saf-021",
+    "saf-022",
+    "saf-023",
+    "saf-024",
+    "saf-025",
+    "saf-026",
+    "saf-027",
+    "saf-028",
+    "saf-029",
+    "saf-030",
+    "int-001",
+    "int-007",
+    "int-013",
+    "int-018",
+    "int-019",
+    "int-022",
+    "int-025",
+    "int-030",
+    "int-031",
+    "int-033",
+    "int-035",
+    "int-037",
+    "int-039",
+    "per-004",
+    "per-010",
+    "per-018",
+    "per-020"
+  ],
+  "new_cases": [
+    {
+      "id": "reg-001",
+      "category": "memory",
+      "title": "敏感信息两阶段",
+      "steps": [
+        {
+          "type": "say",
+          "text": "我已经结婚了。",
+          "expect": {
+            "candidate": true,
+            "sensitive": true
+          }
+        },
+        {
+          "type": "confirm",
+          "sensitive_consent": false,
+          "expect_rejected": true
+        },
+        {
+          "type": "confirm",
+          "sensitive_consent": true
+        }
+      ],
+      "expected_count": 1,
+      "expected_kind": "Identity",
+      "setup": [],
+      "notes": "v2.1 新增回归；独立于原固定标签。故障注入在单元测试中单列。"
+    },
+    {
+      "id": "reg-002",
+      "category": "micro_action",
+      "title": "求助不被普通候选抢占",
+      "steps": [
+        {
+          "type": "say",
+          "text": "我明天面试，很焦虑，不知道怎么办。",
+          "expect": {
+            "action": true
+          }
+        }
+      ],
+      "expected_action": true,
+      "setup": [],
+      "notes": "v2.1 新增回归；独立于原固定标签。故障注入在单元测试中单列。"
+    },
+    {
+      "id": "reg-003",
+      "category": "micro_action",
+      "title": "Reflect 后明确转向 Action",
+      "steps": [
+        {
+          "type": "say",
+          "text": "我为什么这么在意别人怎么看我？我只想理解原因。",
+          "expect": {
+            "action": false
+          }
+        },
+        {
+          "type": "say",
+          "text": "那给我一个低负担的小行动，我想试试。",
+          "expect": {
+            "action": true
+          }
+        }
+      ],
+      "expected_action": true,
+      "setup": [],
+      "notes": "v2.1 新增回归；独立于原固定标签。故障注入在单元测试中单列。"
+    },
+    {
+      "id": "reg-004",
+      "category": "micro_action",
+      "title": "互斥选择模式",
+      "steps": [
+        {
+          "type": "say",
+          "text": "我在面试准备和整理简历之间犹豫，请在这里给我这两个选项，让我选一项。",
+          "expect": {
+            "action": true,
+            "action_type": "IN_APP",
+            "input_mode": "choice",
+            "response_none": [
+              "自由输入",
+              "自己输入",
+              "输入其他"
+            ]
+          }
+        }
+      ],
+      "expected_action": true,
+      "setup": [],
+      "notes": "v2.1 新增回归；独立于原固定标签。故障注入在单元测试中单列。"
+    },
+    {
+      "id": "reg-005",
+      "category": "micro_action",
+      "title": "互斥文本模式",
+      "steps": [
+        {
+          "type": "say",
+          "text": "我想输入一句对明天自己的鼓励，你帮我开始。",
+          "expect": {
+            "action": true,
+            "action_type": "IN_APP",
+            "input_mode": "text"
+          }
+        }
+      ],
+      "expected_action": true,
+      "setup": [],
+      "notes": "v2.1 新增回归；独立于原固定标签。故障注入在单元测试中单列。"
+    },
+    {
+      "id": "reg-006",
+      "category": "memory",
+      "title": "未确认不能声称已保存",
+      "steps": [
+        {
+          "type": "say",
+          "text": "请记住，我希望你少提问，先陪着我。",
+          "expect": {
+            "candidate": true,
+            "response_none": [
+              "已经记住",
+              "已记录",
+              "记录下了",
+              "已保存"
+            ]
+          }
+        }
+      ],
+      "expected_count": 0,
+      "setup": [],
+      "notes": "v2.1 新增回归；独立于原固定标签。故障注入在单元测试中单列。"
+    }
+  ]
+}

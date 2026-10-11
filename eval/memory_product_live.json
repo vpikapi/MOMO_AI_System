@@ -1,0 +1,334 @@
+[
+  [
+    {
+      "model": "kimi-k3",
+      "input": "你好",
+      "passed": true,
+      "candidates": [],
+      "calls": [
+        {
+          "stage": "memory",
+          "model": "kimi-k3",
+          "status": "completed",
+          "input_tokens": 676,
+          "output_tokens": 39,
+          "seconds": 3.76
+        }
+      ]
+    },
+    {
+      "model": "kimi-k3",
+      "input": "我不喜欢连续被提问，情绪低落时希望先得到安慰。",
+      "passed": true,
+      "candidates": [
+        {
+          "id": "51083771c1be052b4620d0bcb55b2e6647bbbc6d18ba32d8a32484d21ac5ea0a",
+          "user_id": "fictional-tester",
+          "memory_key": "3bfb86fab0dce0bb4a9e8b7f08d7ec979e799a296dacd9569bf6ae693e431496",
+          "kind": "Preference",
+          "content": "用户不喜欢连续被提问；情绪低落时希望先得到安慰。",
+          "importance": 0.8,
+          "confidence": 0.95,
+          "sensitivity": false,
+          "expires_at": "2026-12-08T14:28:03.734224+00:00",
+          "source": "来自对话 · 2026-09-09 22:28"
+        }
+      ],
+      "calls": [
+        {
+          "stage": "memory",
+          "model": "kimi-k3",
+          "status": "completed",
+          "input_tokens": 686,
+          "output_tokens": 130,
+          "seconds": 8.44
+        }
+      ]
+    },
+    {
+      "model": "kimi-k3",
+      "input": "我明天有一场求职面试。",
+      "passed": true,
+      "candidates": [
+        {
+          "id": "fcc42cc4960ea0be23bba50412d5a92a5924a21964f02fb9624db1f29ea0b3b8",
+          "user_id": "fictional-tester",
+          "memory_key": "1abe4f36c52afa8da5b680092b4c2dcf5b424787f9d65b666569f5647b39c35b",
+          "kind": "Episodic",
+          "content": "用户将于 2026-09-10 参加一场求职面试。",
+          "importance": 0.7,
+          "confidence": 0.95,
+          "sensitivity": false,
+          "expires_at": "2026-09-11T00:00:00+08:00",
+          "source": "来自对话 · 2026-09-09 22:28"
+        }
+      ],
+      "calls": [
+        {
+          "stage": "memory",
+          "model": "kimi-k3",
+          "status": "completed",
+          "input_tokens": 680,
+          "output_tokens": 184,
+          "seconds": 7.5
+        }
+      ]
+    },
+    {
+      "model": "kimi-k3",
+      "input": "不要记住我刚才说的内容。",
+      "passed": true,
+      "candidates": [],
+      "calls": []
+    }
+  ],
+  [
+    {
+      "model": "qwen3.8-flash",
+      "input": "你好",
+      "passed": true,
+      "candidates": [],
+      "calls": [
+        {
+          "stage": "memory",
+          "model": "qwen3.8-flash",
+          "status": "completed",
+          "input_tokens": 560,
+          "output_tokens": 5,
+          "seconds": 0.99
+        }
+      ]
+    },
+    {
+      "model": "qwen3.8-flash",
+      "input": "我不喜欢连续被提问，情绪低落时希望先得到安慰。",
+      "passed": true,
+      "candidates": [
+        {
+          "id": "8eab941b2ea1c4f27068902ab268dbe1948b2ca0512eadfb53231f143afeea88",
+          "user_id": "fictional-tester",
+          "memory_key": "48aa917e9b9177e27b3e890b33c3189a2e9f27e61b14758febf4352b8a34aff5",
+          "kind": "Preference",
+          "content": "用户不喜欢连续被提问，在情绪低落时希望先得到安慰。",
+          "importance": 0.9,
+          "confidence": 1.0,
+          "sensitivity": false,
+          "expires_at": "2026-12-08T14:27:53.779258+00:00",
+          "source": "来自对话 · 2026-09-09 22:27"
+        }
+      ],
+      "calls": [
+        {
+          "stage": "memory",
+          "model": "qwen3.8-flash",
+          "status": "completed",
+          "input_tokens": 573,
+          "output_tokens": 83,
+          "seconds": 1.38
+        }
+      ]
+    },
+    {
+      "model": "qwen3.8-flash",
+      "input": "我明天有一场求职面试。",
+      "passed": true,
+      "candidates": [
+        {
+          "id": "74a864e5717a0a6dcb48b1520196f6d4f91316cf022ff1606356eee5a2b9ac79",
+          "user_id": "fictional-tester",
+          "memory_key": "3d23f95974979c2d7cf50efb750e831f2cfc798eb7fe208b5f80c9a336e4c18f",
+          "kind": "Episodic",
+          "content": "用户于2026年9月10日有一场求职面试。",
+          "importance": 0.7,
+          "confidence": 0.95,
+          "sensitivity": false,
+          "expires_at": "2026-09-11T00:00:00+08:00",
+          "source": "来自对话 · 2026-09-09 22:27"
+        }
+      ],
+      "calls": [
+        {
+          "stage": "memory",
+          "model": "qwen3.8-flash",
+          "status": "completed",
+          "input_tokens": 566,
+          "output_tokens": 99,
+          "seconds": 1.7
+        }
+      ]
+    },
+    {
+      "model": "qwen3.8-flash",
+      "input": "不要记住我刚才说的内容。",
+      "passed": true,
+      "candidates": [],
+      "calls": []
+    }
+  ],
+  [
+    {
+      "model": "glm-5.2",
+      "input": "你好",
+      "passed": true,
+      "candidates": [],
+      "calls": [
+        {
+          "stage": "memory",
+          "model": "glm-5.2",
+          "status": "completed",
+          "input_tokens": 548,
+          "output_tokens": 5,
+          "seconds": 0.83
+        }
+      ]
+    },
+    {
+      "model": "glm-5.2",
+      "input": "我不喜欢连续被提问，情绪低落时希望先得到安慰。",
+      "passed": true,
+      "candidates": [
+        {
+          "id": "cf75c61f6e8b1895f33837d6bc65fd71f10c5e1061b77408568bf42ae9760f09",
+          "user_id": "fictional-tester",
+          "memory_key": "800cee5cad290619dc10fde97c8e7466f17b8805577e61c099ed52bd75c949a1",
+          "kind": "Preference",
+          "content": "不喜欢连续被提问，情绪低落时希望先得到安慰而非被追问",
+          "importance": 0.8,
+          "confidence": 0.95,
+          "sensitivity": false,
+          "expires_at": "2026-12-08T14:27:58.171324+00:00",
+          "source": "来自对话 · 2026-09-09 22:27"
+        }
+      ],
+      "calls": [
+        {
+          "stage": "memory",
+          "model": "glm-5.2",
+          "status": "completed",
+          "input_tokens": 562,
+          "output_tokens": 60,
+          "seconds": 1.83
+        }
+      ]
+    },
+    {
+      "model": "glm-5.2",
+      "input": "我明天有一场求职面试。",
+      "passed": true,
+      "candidates": [
+        {
+          "id": "f7a3ed6666f3674c4cd1e3e748027fc72f59b21f50e78587921dd8b1cf84b1d2",
+          "user_id": "fictional-tester",
+          "memory_key": "554e577e7b6341fd458af9dade1d1f1181dac98f72503c839e08e87eb2cee6ec",
+          "kind": "Episodic",
+          "content": "用户有求职面试",
+          "importance": 0.6,
+          "confidence": 0.95,
+          "sensitivity": true,
+          "expires_at": "2026-09-11T00:00:00+08:00",
+          "source": "来自对话 · 2026-09-09 22:28"
+        }
+      ],
+      "calls": [
+        {
+          "stage": "memory",
+          "model": "glm-5.2",
+          "status": "completed",
+          "input_tokens": 554,
+          "output_tokens": 71,
+          "seconds": 2.05
+        }
+      ]
+    },
+    {
+      "model": "glm-5.2",
+      "input": "不要记住我刚才说的内容。",
+      "passed": true,
+      "candidates": [],
+      "calls": []
+    }
+  ],
+  [
+    {
+      "model": "deepseek-v4-flash-0731",
+      "input": "你好",
+      "passed": true,
+      "candidates": [],
+      "calls": [
+        {
+          "stage": "memory",
+          "model": "deepseek-v4-flash-0731",
+          "status": "completed",
+          "input_tokens": 540,
+          "output_tokens": 6,
+          "seconds": 1.14
+        }
+      ]
+    },
+    {
+      "model": "deepseek-v4-flash-0731",
+      "input": "我不喜欢连续被提问，情绪低落时希望先得到安慰。",
+      "passed": true,
+      "candidates": [
+        {
+          "id": "c8e6d40747b6b445781e298731f00c7614ac65615310d925049b106b5b6e101b",
+          "user_id": "fictional-tester",
+          "memory_key": "08cbc6012d05a4cbed7c34d757d0da068139f36c7e8a9acf68f2b14eda51d1ea",
+          "kind": "Preference",
+          "content": "不喜欢连续被提问，情绪低落时希望先得到安慰",
+          "importance": 0.7,
+          "confidence": 0.9,
+          "sensitivity": false,
+          "expires_at": "2026-12-08T14:28:02.925258+00:00",
+          "source": "来自对话 · 2026-09-09 22:28"
+        }
+      ],
+      "calls": [
+        {
+          "stage": "memory",
+          "model": "deepseek-v4-flash-0731",
+          "status": "completed",
+          "input_tokens": 553,
+          "output_tokens": 58,
+          "seconds": 1.58
+        }
+      ]
+    },
+    {
+      "model": "deepseek-v4-flash-0731",
+      "input": "我明天有一场求职面试。",
+      "passed": true,
+      "candidates": [
+        {
+          "id": "af9cf2b10009260f4638df79321be67ee82e954a3d5f69651b77ed1bef45974a",
+          "user_id": "fictional-tester",
+          "memory_key": "4582dcf2faf636cbf12c3f924dbcae7833e19c5190ac39010d3ad9fed9b184af",
+          "kind": "Episodic",
+          "content": "用户于2026-09-10有一场求职面试。",
+          "importance": 0.5,
+          "confidence": 0.9,
+          "sensitivity": false,
+          "expires_at": "2026-09-11T00:00:00+08:00",
+          "source": "来自对话 · 2026-09-09 22:28"
+        }
+      ],
+      "calls": [
+        {
+          "stage": "memory",
+          "model": "deepseek-v4-flash-0731",
+          "status": "completed",
+          "input_tokens": 546,
+          "output_tokens": 67,
+          "seconds": 1.59
+        }
+      ]
+    },
+    {
+      "model": "deepseek-v4-flash-0731",
+      "input": "不要记住我刚才说的内容。",
+      "passed": true,
+      "candidates": [],
+      "calls": []
+    }
+  ]
+]

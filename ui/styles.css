@@ -1,0 +1,46 @@
+
+:root{--ink:#34433c;--muted:#758076;--sage:#667c64;--paper:#faf8f3;--line:#e9e9df}
+.stApp{background:var(--paper);color:var(--ink);font-family:"Microsoft YaHei",sans-serif}
+[data-testid="stMainBlockContainer"]{max-width:860px;padding-top:2rem;padding-bottom:6rem}
+h1,h2,h3{color:var(--ink);letter-spacing:-.035em!important}h1{font-size:2rem!important;font-weight:650!important;padding-bottom:.45rem!important}h2{font-size:1.28rem!important}h3{font-size:1.1rem!important}
+p{line-height:1.8} [data-testid="stCaptionContainer"]{color:var(--muted)}
+[data-testid="stHeader"]{background:transparent}#MainMenu,[data-testid="stToolbar"]{display:none}
+[data-testid="stSidebar"]{background:#f1f3ed;border-right:1px solid var(--line)}
+[data-testid="stButton"] button,[data-testid="stLinkButton"] a,[data-testid="stPopover"] button{border-radius:14px;border:1px solid #e2e5db;background:#fffdfa;color:var(--ink);min-height:44px;box-shadow:none}
+[data-testid="stButton"] button:hover,[data-testid="stLinkButton"] a:hover{border-color:#9eae97;background:#eef2e9;color:var(--ink)}
+[data-testid="stButton"] button[kind="primary"]{background:#657c64;color:#fff;border-color:#657c64}
+[data-testid="stButton"] button:focus-visible{outline:3px solid #b4c4a9;outline-offset:2px}
+.st-key-momo_nav{margin-bottom:1.6rem;background:#eeefe8;padding:6px;border-radius:18px}
+.st-key-momo_nav [data-testid="stHorizontalBlock"]{gap:4px}
+.st-key-momo_nav button{border:0;background:transparent;width:100%;min-height:44px;padding:0 8px}
+.st-key-momo_nav button[kind="primary"]{background:#fffdf8;color:#465b45;box-shadow:0 2px 10px #657c6410;font-weight:700}
+[data-testid="stVerticalBlockBorderWrapper"]>div{border-color:#e9e9df!important;border-radius:20px!important;background:#fffefa;box-shadow:0 4px 20px #3b4c3905}
+[data-testid="stExpander"]{border:1px solid #e4e8de!important;border-radius:14px!important;box-shadow:none}
+[data-testid="stChatMessage"]{background:transparent!important;padding:.6rem 0;gap:10px;align-items:flex-start}
+[data-testid="stChatMessageContent"]{flex-grow:0!important;max-width:85%;width:fit-content!important;background:#fffefa;border-radius:5px 20px 20px 20px;padding:13px 18px;box-shadow:0 3px 15px #374b3b06}
+[data-testid="stChatMessage"]:has(.chat-user-marker){flex-direction:row-reverse}
+[data-testid="stChatMessage"]:has(.chat-user-marker) [data-testid="stChatMessageContent"]{background:#e9eee2;border-radius:20px 5px 20px 20px}
+[data-testid="stChatMessageAvatarUser"]{display:none}
+.chat-user-marker{display:none}
+[data-testid="stChatMessageAvatarAssistant"] img{border-radius:50%}
+[data-testid="stBottom"]{background:var(--paper)}
+/* 固定输入区的全宽外层也使用页面底色，避免内容区两侧露出默认白底。 */
+[data-testid="stBottom"]>div:has([data-testid="stBottomBlockContainer"]){background:var(--paper)!important}
+[data-testid="stBottomBlockContainer"]{max-width:860px;margin:auto;padding-top:10px}
+[data-testid="stChatInput"]{border:1px solid #dbe2d5;border-radius:24px;background:#fffefa;box-shadow:0 4px 20px #5364470b}
+[data-testid="stTextArea"] textarea,[data-baseweb="select"]>div{border-radius:12px;background:#fffefa}
+.momo-brand{display:flex;align-items:center;gap:10px;margin-bottom:18px;font-size:18px;font-weight:700;letter-spacing:2px}.momo-brand img{width:38px;height:38px;border-radius:14px}.momo-brand span{font-size:11px;font-weight:400;letter-spacing:1px;color:#7b8879}
+.momo-hero{padding:22px 30px 26px;background:linear-gradient(135deg,#eef1e6,#f8f2e6);border-radius:28px;margin:0 0 12px;position:relative;overflow:hidden;text-align:center}.momo-hero img{width:128px;height:128px;border-radius:46px;margin-bottom:12px}.momo-hero h1{font-size:27px!important;margin:0}.momo-hero p{color:#7b8476;margin:6px 0 0}.eyebrow{font-size:11px;letter-spacing:2px;color:#7e8d78;text-transform:uppercase;margin-bottom:12px}.momo-divider{height:1px;background:#e5e8df;margin:16px 0}.momo-pill{display:inline-block;background:#e8eee0;color:#61735b;padding:5px 14px;border-radius:30px;font-size:12px}.empty-note{color:#8a9184;padding:16px 0 24px;font-size:14px}.section-note{font-size:13px;color:#7b8777;margin:8px 0 18px}.momo-pagehead{display:flex;align-items:center;gap:12px}.momo-pagehead img{width:44px;height:44px;border-radius:16px}
+@media(max-width:640px){[data-testid="stMainBlockContainer"]{padding:1rem 1rem 6rem}.st-key-momo_nav [data-testid="stHorizontalBlock"]{flex-wrap:nowrap!important}.st-key-momo_nav [data-testid="stColumn"]{min-width:0!important;flex:1!important;width:auto!important}.st-key-momo_nav button p{font-size:13px}.momo-hero{padding:20px 16px}.momo-hero h1{font-size:24px!important}[data-testid="stChatMessageContent"]{max-width:88%;padding:10px 13px}h1{font-size:26px!important}}
+
+[class*="st-key-card_"]{border:1px solid #edece2!important;border-radius:20px!important;background:#fffefa!important;box-shadow:0 4px 24px #59624d06;padding:20px!important}
+[class*="st-key-card_pending"],[class*="st-key-card_action"]{background:#f2f4eb!important;border-color:#e8ecde!important}
+[data-testid="stChatMessageContent"]{margin:0!important}
+[data-testid="stChatMessage"]:has(.chat-user-marker) [data-testid="stChatMessageContent"]{margin-left:auto!important;margin-right:0!important}
+[data-testid="stChatMessage"]>.stElementContainer{display:none}
+[data-testid="stChatMessageContent"] [data-testid="stElementContainer"]:has(.chat-user-marker){display:none}
+[data-testid="stChatMessage"]>img{width:34px;height:34px;border-radius:13px}
+[data-testid="stBottomBlockContainer"]{background:#faf8f3!important}
+[data-testid="stChatInput"]{background:#fffefa!important;border-radius:24px!important}
+[data-testid="stChatInput"] textarea{background:#fffefa!important}
+@media(max-width:640px){[class*="st-key-card_"]{padding:16px!important}[class*="st-key-card_pending"] [data-testid="stHorizontalBlock"],.st-key-card_action [data-testid="stHorizontalBlock"]{flex-wrap:nowrap!important}[class*="st-key-card_pending"] [data-testid="stColumn"],.st-key-card_action [data-testid="stColumn"]{min-width:0!important;flex:1!important}}

@@ -1,0 +1,268 @@
+[
+  {
+    "user_input": "把我的职业信息忘掉。",
+    "steps": [
+      {
+        "type": "say",
+        "text": "把我的职业信息忘掉。",
+        "expect": {
+          "action": false
+        }
+      }
+    ],
+    "expected_action": false,
+    "expected_action_type": null,
+    "setup": [
+      {
+        "slot": "job",
+        "content": "物理老师",
+        "kind": "Identity",
+        "importance": 0.9,
+        "confidence": 0.95
+      }
+    ],
+    "human_dimensions": [
+      "trigger_correct",
+      "relevance",
+      "low_effort",
+      "optional",
+      "non_pressuring",
+      "action_type_correct"
+    ],
+    "id": "mic-006",
+    "category": "micro_action",
+    "notes": "依据当前产品规则拟定，未经独立标注者复核。"
+  },
+  {
+    "user_input": "我为什么总在意别人的眼光？只想理解原因。",
+    "steps": [
+      {
+        "type": "say",
+        "text": "我为什么总在意别人的眼光？只想理解原因。",
+        "expect": {
+          "action": false
+        }
+      }
+    ],
+    "expected_action": false,
+    "expected_action_type": null,
+    "setup": [],
+    "human_dimensions": [
+      "trigger_correct",
+      "relevance",
+      "low_effort",
+      "optional",
+      "non_pressuring",
+      "action_type_correct"
+    ],
+    "id": "mic-010",
+    "category": "micro_action",
+    "notes": "依据当前产品规则拟定，未经独立标注者复核。"
+  },
+  {
+    "user_input": "帮我用一句话写下最担心的事，就在这里输入。",
+    "steps": [
+      {
+        "type": "say",
+        "text": "帮我用一句话写下最担心的事，就在这里输入。",
+        "expect": {
+          "action": true,
+          "action_type": "IN_APP"
+        }
+      }
+    ],
+    "expected_action": true,
+    "expected_action_type": "IN_APP",
+    "setup": [],
+    "human_dimensions": [
+      "trigger_correct",
+      "relevance",
+      "low_effort",
+      "optional",
+      "non_pressuring",
+      "action_type_correct"
+    ],
+    "id": "mic-014",
+    "category": "micro_action",
+    "notes": "依据当前产品规则拟定，未经独立标注者复核。"
+  },
+  {
+    "user_input": "想在这里选一个最先处理的问题，请给我选项。",
+    "steps": [
+      {
+        "type": "say",
+        "text": "想在这里选一个最先处理的问题，请给我选项。",
+        "expect": {
+          "action": false
+        }
+      }
+    ],
+    "expected_action": false,
+    "expected_action_type": null,
+    "setup": [],
+    "human_dimensions": [
+      "trigger_correct",
+      "relevance",
+      "low_effort",
+      "optional",
+      "non_pressuring",
+      "action_type_correct"
+    ],
+    "id": "mic-015",
+    "category": "micro_action",
+    "notes": "依据当前产品规则拟定，未经独立标注者复核。"
+  },
+  {
+    "user_input": "我想输入一句对明天自己的鼓励，你帮我开始。",
+    "steps": [
+      {
+        "type": "say",
+        "text": "我想输入一句对明天自己的鼓励，你帮我开始。",
+        "expect": {
+          "action": true,
+          "action_type": "IN_APP"
+        }
+      }
+    ],
+    "expected_action": true,
+    "expected_action_type": "IN_APP",
+    "setup": [],
+    "human_dimensions": [
+      "trigger_correct",
+      "relevance",
+      "low_effort",
+      "optional",
+      "non_pressuring",
+      "action_type_correct"
+    ],
+    "id": "mic-016",
+    "category": "micro_action",
+    "notes": "依据当前产品规则拟定，未经独立标注者复核。"
+  },
+  {
+    "user_input": "请给我去喝一口水这个线下小动作。",
+    "steps": [
+      {
+        "type": "say",
+        "text": "请给我去喝一口水这个线下小动作。",
+        "expect": {
+          "action": true,
+          "action_type": "OFFLINE"
+        }
+      }
+    ],
+    "expected_action": true,
+    "expected_action_type": "OFFLINE",
+    "setup": [],
+    "human_dimensions": [
+      "trigger_correct",
+      "relevance",
+      "low_effort",
+      "optional",
+      "non_pressuring",
+      "action_type_correct"
+    ],
+    "id": "mic-017",
+    "category": "micro_action",
+    "notes": "依据当前产品规则拟定，未经独立标注者复核。"
+  },
+  {
+    "user_input": "想整理桌面，给我一个现实中能马上做的小动作。",
+    "steps": [
+      {
+        "type": "say",
+        "text": "想整理桌面，给我一个现实中能马上做的小动作。",
+        "expect": {
+          "action": true,
+          "action_type": "OFFLINE"
+        }
+      }
+    ],
+    "expected_action": true,
+    "expected_action_type": "OFFLINE",
+    "setup": [],
+    "human_dimensions": [
+      "trigger_correct",
+      "relevance",
+      "low_effort",
+      "optional",
+      "non_pressuring",
+      "action_type_correct"
+    ],
+    "id": "mic-018",
+    "category": "micro_action",
+    "notes": "依据当前产品规则拟定，未经独立标注者复核。"
+  },
+  {
+    "id": "mic-021",
+    "category": "micro_action",
+    "user_input": "先提供候选再请求选择",
+    "setup": [],
+    "steps": [
+      {
+        "type": "say",
+        "text": "现在最困扰我的是明天面试和周末搬家，先听我说说，不用建议。",
+        "expect": {
+          "action": false
+        }
+      },
+      {
+        "type": "say",
+        "text": "想在这里选一个最先处理的问题，请给我选项。",
+        "expect": {
+          "action": true,
+          "action_type": "IN_APP"
+        }
+      }
+    ],
+    "notes": "新增：上下文充分直接 IN_APP"
+  },
+  {
+    "id": "mic-022",
+    "category": "micro_action",
+    "user_input": "一次澄清后给选项",
+    "setup": [],
+    "steps": [
+      {
+        "type": "say",
+        "text": "想在这里选一个最先处理的问题，请给我选项。",
+        "expect": {
+          "action": false
+        }
+      },
+      {
+        "type": "say",
+        "text": "候选是明天面试和周末搬家，请让我在这里选一个。",
+        "expect": {
+          "action": true,
+          "action_type": "IN_APP"
+        }
+      }
+    ],
+    "notes": "新增：缺上下文最多一次澄清"
+  },
+  {
+    "id": "reg-004",
+    "category": "micro_action",
+    "title": "互斥选择模式",
+    "steps": [
+      {
+        "type": "say",
+        "text": "我在面试准备和整理简历之间犹豫，请在这里给我这两个选项，让我选一项。",
+        "expect": {
+          "action": true,
+          "action_type": "IN_APP",
+          "input_mode": "choice",
+          "response_none": [
+            "自由输入",
+            "自己输入",
+            "输入其他"
+          ]
+        }
+      }
+    ],
+    "expected_action": true,
+    "setup": [],
+    "notes": "v2.1 新增回归；独立于原固定标签。故障注入在单元测试中单列。"
+  }
+]

@@ -1,0 +1,164 @@
+{
+  "$defs": {
+    "MemoryFact": {
+      "description": "模型提出的单一事实；只有确认后才转为长期记忆。",
+      "properties": {
+        "kind": {
+          "enum": [
+            "Identity",
+            "Preference",
+            "Episodic",
+            "Relationship"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "slot": {
+          "enum": [
+            "name",
+            "job",
+            "city",
+            "education",
+            "relationship_status",
+            "advice_preference",
+            "question_preference",
+            "tone_preference",
+            "interaction_preference",
+            "other"
+          ],
+          "title": "Slot",
+          "type": "string"
+        },
+        "content": {
+          "maxLength": 300,
+          "minLength": 1,
+          "title": "Content",
+          "type": "string"
+        },
+        "importance": {
+          "default": 0.9,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Importance",
+          "type": "number"
+        },
+        "confidence": {
+          "default": 0.9,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "sensitivity": {
+          "default": false,
+          "title": "Sensitivity",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "kind",
+        "slot",
+        "content"
+      ],
+      "title": "MemoryFact",
+      "type": "object"
+    }
+  },
+  "description": "安全放行后生成的控制计划；目标键由程序校验，模型不执行写入。",
+  "properties": {
+    "intent": {
+      "enum": [
+        "MEMORY_CREATE",
+        "MEMORY_UPDATE",
+        "MEMORY_DELETE",
+        "MEMORY_BLOCK",
+        "MEMORY_QUERY",
+        "NONE"
+      ],
+      "title": "Intent",
+      "type": "string"
+    },
+    "operations": {
+      "items": {
+        "enum": [
+          "CREATE",
+          "UPDATE",
+          "DELETE",
+          "BLOCK"
+        ],
+        "type": "string"
+      },
+      "title": "Operations",
+      "type": "array"
+    },
+    "slots": {
+      "items": {
+        "enum": [
+          "name",
+          "job",
+          "city",
+          "education",
+          "relationship_status",
+          "advice_preference",
+          "question_preference",
+          "tone_preference",
+          "interaction_preference",
+          "other"
+        ],
+        "type": "string"
+      },
+      "title": "Slots",
+      "type": "array"
+    },
+    "target_keys": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Target Keys",
+      "type": "array"
+    },
+    "replacements": {
+      "items": {
+        "$ref": "#/$defs/MemoryFact"
+      },
+      "maxItems": 8,
+      "title": "Replacements",
+      "type": "array"
+    },
+    "clarification": {
+      "default": "",
+      "title": "Clarification",
+      "type": "string"
+    },
+    "explicit_help": {
+      "default": false,
+      "title": "Explicit Help",
+      "type": "boolean"
+    },
+    "action_willing": {
+      "default": false,
+      "title": "Action Willing",
+      "type": "boolean"
+    },
+    "refuses_action": {
+      "default": false,
+      "title": "Refuses Action",
+      "type": "boolean"
+    },
+    "topic": {
+      "default": "",
+      "title": "Topic",
+      "type": "string"
+    },
+    "needs_clarification": {
+      "default": false,
+      "title": "Needs Clarification",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "intent"
+  ],
+  "title": "MemoryControlResult",
+  "type": "object"
+}

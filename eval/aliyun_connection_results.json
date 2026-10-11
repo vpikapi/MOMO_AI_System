@@ -1,0 +1,110 @@
+[
+  {
+    "model": "kimi-k3",
+    "passed": true,
+    "checks": {
+      "model": "kimi-k3",
+      "普通回复": "通过",
+      "分类 JSON 与问候风险": "通过"
+    },
+    "calls": [
+      {
+        "stage": "connection_text",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 112,
+        "output_tokens": 41,
+        "seconds": 2.84
+      },
+      {
+        "stage": "safety",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 493,
+        "output_tokens": 58,
+        "seconds": 5.03
+      }
+    ]
+  },
+  {
+    "model": "qwen3.8-flash",
+    "passed": true,
+    "checks": {
+      "model": "qwen3.8-flash",
+      "普通回复": "通过",
+      "分类 JSON 与问候风险": "通过"
+    },
+    "calls": [
+      {
+        "stage": "connection_text",
+        "model": "qwen3.8-flash",
+        "status": "completed",
+        "input_tokens": 32,
+        "output_tokens": 8,
+        "seconds": 0.66
+      },
+      {
+        "stage": "safety",
+        "model": "qwen3.8-flash",
+        "status": "completed",
+        "input_tokens": 380,
+        "output_tokens": 14,
+        "seconds": 0.66
+      }
+    ]
+  },
+  {
+    "model": "glm-5.2",
+    "passed": true,
+    "checks": {
+      "model": "glm-5.2",
+      "普通回复": "通过",
+      "分类 JSON 与问候风险": "通过"
+    },
+    "calls": [
+      {
+        "stage": "connection_text",
+        "model": "glm-5.2",
+        "status": "completed",
+        "input_tokens": 25,
+        "output_tokens": 8,
+        "seconds": 0.84
+      },
+      {
+        "stage": "safety",
+        "model": "glm-5.2",
+        "status": "completed",
+        "input_tokens": 365,
+        "output_tokens": 14,
+        "seconds": 0.8
+      }
+    ]
+  },
+  {
+    "model": "deepseek-v4-flash-0731",
+    "passed": true,
+    "checks": {
+      "model": "deepseek-v4-flash-0731",
+      "普通回复": "通过",
+      "分类 JSON 与问候风险": "通过"
+    },
+    "calls": [
+      {
+        "stage": "connection_text",
+        "model": "deepseek-v4-flash-0731",
+        "status": "completed",
+        "input_tokens": 21,
+        "output_tokens": 8,
+        "seconds": 2.64
+      },
+      {
+        "stage": "safety",
+        "model": "deepseek-v4-flash-0731",
+        "status": "completed",
+        "input_tokens": 360,
+        "output_tokens": 14,
+        "seconds": 1.2
+      }
+    ]
+  }
+]

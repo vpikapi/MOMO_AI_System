@@ -1,0 +1,56 @@
+{
+  "run_id": "input_20260911T080258355875Z",
+  "evaluation_version": "input_fix",
+  "started_at": "2026-09-11T08:02:58.356886+00:00",
+  "model_name": "qwen3.8-flash",
+  "temperature": null,
+  "temperature_policy": "not_sent_production_default",
+  "selected_count": 10,
+  "selected_ids": [
+    "mic-006",
+    "mic-010",
+    "mic-014",
+    "mic-015",
+    "mic-016",
+    "mic-017",
+    "mic-018",
+    "mic-021",
+    "mic-022",
+    "reg-004"
+  ],
+  "categories": [
+    "micro_action"
+  ],
+  "dataset_version": "v1_1 unchanged subset + reg-004",
+  "prompt_version": {
+    "app.py": "b71f7bc51f906aa08c09ce9c927e08dcbc49e1e3f3d08162f25523257531c1ed",
+    "momo\\graph.py": "3a861f88f1cde92a9a7391bfcd7b5a072711ce8902b7b5cf672195bbefcdd8b1",
+    "momo\\models.py": "bb479f4c8abe5d46d2d210568b95934a9182ee7743b58f2d0773f0e6e0aa658d",
+    "momo\\memory.py": "74a72e8907fbc294501d219bd14a6a7707cbe6eb71789e813c1aeea7d115f5e0",
+    "momo\\mock_llm.py": "8b1d9c5b5063ea8eb7536db36865ce88a3ba4b6f733e829de088e65b354cc296",
+    "prompts\\emotion.md": "b19b72f506ed5a15622fd2326ebd23661ed41311dc3fa2d2ea8f4519a6440509",
+    "prompts\\intent.md": "2735ad1fbc96cf1f25f400503c35aff073cdb5a51862c951670620fc84430567",
+    "prompts\\memory.md": "268187b61e7d619ac1526c4c6e250ee1c050ebf8e21afff5c431a78a4d8a5764",
+    "prompts\\memory_control.md": "7bf43b933723fda61418f161219bd2b4fc5509bd91a7c100227a516e41bdb019",
+    "prompts\\micro_action.md": "222dd4bdc4b9eab398a20123e2d5acddc8ae9e693fd49a93caf7266bd3931a29",
+    "prompts\\persona.md": "bacc408dd1617b39a736ded3b7aab3060a15c76725f9c6f137227f43cfb0f3bd",
+    "prompts\\safety.md": "1c3dd122a46e0d15e7e1ea03e89c546d39291cb512c23846c1ffcaa1e8160184"
+  },
+  "production_files": {
+    "app.py": "b71f7bc51f906aa08c09ce9c927e08dcbc49e1e3f3d08162f25523257531c1ed",
+    "momo\\graph.py": "3a861f88f1cde92a9a7391bfcd7b5a072711ce8902b7b5cf672195bbefcdd8b1",
+    "momo\\models.py": "bb479f4c8abe5d46d2d210568b95934a9182ee7743b58f2d0773f0e6e0aa658d",
+    "momo\\memory.py": "74a72e8907fbc294501d219bd14a6a7707cbe6eb71789e813c1aeea7d115f5e0",
+    "momo\\mock_llm.py": "8b1d9c5b5063ea8eb7536db36865ce88a3ba4b6f733e829de088e65b354cc296",
+    "prompts\\emotion.md": "b19b72f506ed5a15622fd2326ebd23661ed41311dc3fa2d2ea8f4519a6440509",
+    "prompts\\intent.md": "2735ad1fbc96cf1f25f400503c35aff073cdb5a51862c951670620fc84430567",
+    "prompts\\memory.md": "268187b61e7d619ac1526c4c6e250ee1c050ebf8e21afff5c431a78a4d8a5764",
+    "prompts\\memory_control.md": "7bf43b933723fda61418f161219bd2b4fc5509bd91a7c100227a516e41bdb019",
+    "prompts\\micro_action.md": "222dd4bdc4b9eab398a20123e2d5acddc8ae9e693fd49a93caf7266bd3931a29",
+    "prompts\\persona.md": "bacc408dd1617b39a736ded3b7aab3060a15c76725f9c6f137227f43cfb0f3bd",
+    "prompts\\safety.md": "1c3dd122a46e0d15e7e1ea03e89c546d39291cb512c23846c1ffcaa1e8160184"
+  },
+  "runner_sha256": "0dc02d3d7e57c680c700bfb342f567f04898b73b65d788a3e0bc52a6bd7f6912",
+  "workers": 4,
+  "finished_at": "2026-09-11T08:03:28.448248+00:00"
+}

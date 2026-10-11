@@ -1,0 +1,7 @@
+{
+  "grading_version": "v1.1-candidate-means-content",
+  "report_runner_sha256": "9f92b3b2a5a2902047a5f8291640a5653026f2a45b507e348a238dba66116095",
+  "correction": "pure BLOCK plan is not a content candidate",
+  "production_changed": false,
+  "additional_model_calls_for_regrading": 0
+}

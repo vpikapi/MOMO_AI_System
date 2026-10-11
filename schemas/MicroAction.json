@@ -1,0 +1,41 @@
+{
+  "properties": {
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "optional": {
+      "const": true,
+      "default": true,
+      "title": "Optional",
+      "type": "boolean"
+    },
+    "action_type": {
+      "default": "OFFLINE",
+      "enum": [
+        "IN_APP",
+        "OFFLINE"
+      ],
+      "title": "Action Type",
+      "type": "string"
+    },
+    "input_prompt": {
+      "default": "",
+      "title": "Input Prompt",
+      "type": "string"
+    },
+    "options": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 5,
+      "title": "Options",
+      "type": "array"
+    }
+  },
+  "required": [
+    "title"
+  ],
+  "title": "MicroAction",
+  "type": "object"
+}

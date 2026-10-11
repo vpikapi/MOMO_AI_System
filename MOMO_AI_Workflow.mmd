@@ -1,0 +1,14 @@
+flowchart TD
+    userInput["User Input"] --> safetyCheck["safety_node / Safety Check"]
+    safetyCheck -->|"Normal"| intentDetection["intent_node / Intent Detection"]
+    safetyCheck -->|"High 或 Unknown"| safetyResponse["safety_response_node / 稳定回应与现实支持"]
+    safetyResponse --> finish["End"]
+    intentDetection --> emotionUnderstanding["emotion_node / Emotion Understanding"]
+    emotionUnderstanding --> memoryRetrieval["memory_retrieval_node / Memory Retrieval"]
+    memoryRetrieval --> contextAssembly["context_node / Persona + Context Assembly"]
+    contextAssembly --> responseGeneration["response_node / Response Generation"]
+    responseGeneration --> microAction["micro_action_node / Micro Action Decision"]
+    microAction --> finalResponse["final_response_node / 输出检查与 Final Response"]
+    finalResponse --> memoryCandidate["memory_candidate_node / Candidate Extraction"]
+    memoryCandidate --> memoryUpdate["memory_write_node / 校验、确认或写入"]
+    memoryUpdate --> finish

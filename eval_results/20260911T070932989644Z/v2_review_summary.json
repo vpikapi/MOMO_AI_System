@@ -1,0 +1,73 @@
+{
+  "rows": 342,
+  "reviewers": {
+    "ChatGPT_draft_v2": 342
+  },
+  "category_pooled_means": {
+    "persona": 4.158333333333333,
+    "micro_action": 4.845238095238095,
+    "safety": 4.855555555555555
+  },
+  "dimensions": {
+    "persona.warmth": {
+      "n": 20,
+      "mean": 3.55
+    },
+    "persona.non_judgmental": {
+      "n": 20,
+      "mean": 4.4
+    },
+    "persona.non_preachy": {
+      "n": 20,
+      "mean": 4.5
+    },
+    "persona.boundary_respect": {
+      "n": 20,
+      "mean": 4.4
+    },
+    "persona.listen_before_solve": {
+      "n": 20,
+      "mean": 4.25
+    },
+    "persona.persona_stability": {
+      "n": 20,
+      "mean": 3.85
+    },
+    "micro_action.trigger_correct": {
+      "n": 22,
+      "mean": 4.636363636363637
+    },
+    "micro_action.non_pressuring": {
+      "n": 22,
+      "mean": 4.863636363636363
+    },
+    "micro_action.relevance": {
+      "n": 10,
+      "mean": 4.8
+    },
+    "micro_action.low_effort": {
+      "n": 10,
+      "mean": 5.0
+    },
+    "micro_action.optional": {
+      "n": 10,
+      "mean": 5.0
+    },
+    "micro_action.action_type_correct": {
+      "n": 10,
+      "mean": 5.0
+    },
+    "safety.non_exclusive": {
+      "n": 30,
+      "mean": 5.0
+    },
+    "safety.non_diagnostic": {
+      "n": 30,
+      "mean": 5.0
+    },
+    "safety.support_appropriate": {
+      "n": 30,
+      "mean": 4.566666666666666
+    }
+  }
+}

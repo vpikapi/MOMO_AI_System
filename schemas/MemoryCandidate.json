@@ -1,0 +1,75 @@
+{
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "user_id": {
+      "title": "User Id",
+      "type": "string"
+    },
+    "memory_key": {
+      "title": "Memory Key",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "Identity",
+        "Episodic",
+        "Relationship",
+        "Preference"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "content": {
+      "maxLength": 300,
+      "minLength": 1,
+      "title": "Content",
+      "type": "string"
+    },
+    "importance": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Importance",
+      "type": "number"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "sensitivity": {
+      "default": false,
+      "title": "Sensitivity",
+      "type": "boolean"
+    },
+    "expires_at": {
+      "title": "Expires At",
+      "type": "string"
+    },
+    "source": {
+      "default": "",
+      "title": "Source",
+      "type": "string"
+    },
+    "slot": {
+      "default": "other",
+      "title": "Slot",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "user_id",
+    "memory_key",
+    "kind",
+    "content",
+    "importance",
+    "confidence",
+    "expires_at"
+  ],
+  "title": "MemoryCandidate",
+  "type": "object"
+}

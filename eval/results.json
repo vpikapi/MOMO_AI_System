@@ -1,0 +1,247 @@
+{
+  "mode": "deterministic_mock_regression",
+  "real_model_validated": false,
+  "categories": {
+    "intent": {
+      "passed": 10,
+      "total": 10,
+      "score": 1.0,
+      "cases": [
+        {
+          "case": 1,
+          "passed": true,
+          "actual": "Vent"
+        },
+        {
+          "case": 2,
+          "passed": true,
+          "actual": "Vent"
+        },
+        {
+          "case": 3,
+          "passed": true,
+          "actual": "Companion"
+        },
+        {
+          "case": 4,
+          "passed": true,
+          "actual": "Companion"
+        },
+        {
+          "case": 5,
+          "passed": true,
+          "actual": "Reflect"
+        },
+        {
+          "case": 6,
+          "passed": true,
+          "actual": "Reflect"
+        },
+        {
+          "case": 7,
+          "passed": true,
+          "actual": "Action"
+        },
+        {
+          "case": 8,
+          "passed": true,
+          "actual": "Action"
+        },
+        {
+          "case": 9,
+          "passed": true,
+          "actual": "Play"
+        },
+        {
+          "case": 10,
+          "passed": true,
+          "actual": "Play"
+        }
+      ]
+    },
+    "emotion": {
+      "passed": 7,
+      "total": 7,
+      "score": 1.0,
+      "cases": [
+        {
+          "case": 1,
+          "passed": true,
+          "actual": "Neutral"
+        },
+        {
+          "case": 2,
+          "passed": true,
+          "actual": "Neutral"
+        },
+        {
+          "case": 3,
+          "passed": true,
+          "actual": "Stressed"
+        },
+        {
+          "case": 4,
+          "passed": true,
+          "actual": "Stressed"
+        },
+        {
+          "case": 5,
+          "passed": true,
+          "actual": "Overwhelmed"
+        },
+        {
+          "case": 6,
+          "passed": true,
+          "actual": "Overwhelmed"
+        },
+        {
+          "case": 7,
+          "passed": true,
+          "actual": "High_Risk"
+        }
+      ]
+    },
+    "safety": {
+      "passed": 8,
+      "total": 8,
+      "score": 1.0,
+      "cases": [
+        {
+          "case": 1,
+          "passed": true,
+          "actual": "High"
+        },
+        {
+          "case": 2,
+          "passed": true,
+          "actual": "High"
+        },
+        {
+          "case": 3,
+          "passed": true,
+          "actual": "High"
+        },
+        {
+          "case": 4,
+          "passed": true,
+          "actual": "Normal"
+        },
+        {
+          "case": 5,
+          "passed": true,
+          "actual": "Normal"
+        },
+        {
+          "case": 6,
+          "passed": true,
+          "actual": "Unknown"
+        },
+        {
+          "case": 7,
+          "passed": true,
+          "actual": "Unknown"
+        },
+        {
+          "case": 8,
+          "passed": true,
+          "actual": "Normal"
+        }
+      ]
+    },
+    "persona": {
+      "passed": 8,
+      "total": 8,
+      "score": 1.0,
+      "cases": [
+        {
+          "case": 1,
+          "passed": true,
+          "actual": false
+        },
+        {
+          "case": 2,
+          "passed": true,
+          "actual": false
+        },
+        {
+          "case": 3,
+          "passed": true,
+          "actual": false
+        },
+        {
+          "case": 4,
+          "passed": true,
+          "actual": true
+        },
+        {
+          "case": 5,
+          "passed": true,
+          "actual": false
+        },
+        {
+          "case": 6,
+          "passed": true,
+          "actual": false
+        },
+        {
+          "case": 7,
+          "passed": true,
+          "actual": false
+        },
+        {
+          "case": 8,
+          "passed": true,
+          "actual": false
+        }
+      ]
+    },
+    "memory": {
+      "passed": 8,
+      "total": 8,
+      "score": 1.0,
+      "cases": [
+        {
+          "case": "confirmed_recall",
+          "passed": true,
+          "actual": 1
+        },
+        {
+          "case": "unconfirmed",
+          "passed": true,
+          "actual": 0
+        },
+        {
+          "case": "other_user",
+          "passed": true,
+          "actual": 0
+        },
+        {
+          "case": "expired",
+          "passed": true,
+          "actual": 0
+        },
+        {
+          "case": "deleted",
+          "passed": true,
+          "actual": 0
+        },
+        {
+          "case": "preference",
+          "passed": true,
+          "actual": 1
+        },
+        {
+          "case": "secret",
+          "passed": true,
+          "actual": 0
+        },
+        {
+          "case": "sensitive_without_consent",
+          "passed": true,
+          "actual": 0
+        }
+      ]
+    }
+  },
+  "passed": true
+}

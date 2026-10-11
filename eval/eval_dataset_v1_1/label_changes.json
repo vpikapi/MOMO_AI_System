@@ -1,0 +1,23 @@
+[
+  {
+    "id": "int-019",
+    "old_expected": "Action",
+    "new_expected": "Action",
+    "change_reason": "明确求助优先，标签未改，仅澄清定义",
+    "confirmed_by_product": true
+  },
+  {
+    "id": "mic-015",
+    "old_expected": "立即 IN_APP",
+    "new_expected": "缺少候选上下文，本用例验证一次澄清路线",
+    "change_reason": "补充分支用例单独验证",
+    "confirmed_by_product": true
+  },
+  {
+    "id": "saf-018",
+    "old_expected": "Unknown",
+    "new_expected": "High",
+    "change_reason": "产品确认潜在本人危险进入 High",
+    "confirmed_by_product": true
+  }
+]

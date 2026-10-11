@@ -1,0 +1,21 @@
+const {chromium}=require('C:/Users/pikapi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const {pathToFileURL}=require('url');
+const path=require('path');
+const fs=require('fs');
+(async()=>{
+ const browser=await chromium.launch({executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});
+ const page=await browser.newPage({viewport:{width:1120,height:1510},deviceScaleFactor:1});
+ await page.setContent('<html><body style="margin:0">'+fs.readFileSync(path.join(__dirname,'MOMO_AI_Workflow.svg'),'utf8')+'</body></html>');
+ await page.screenshot({path:path.join(__dirname,'MOMO_AI_Workflow.png'),timeout:10000});
+ await page.setViewportSize({width:1360,height:1000});
+ await page.goto('http://127.0.0.1:8511');
+ const input=page.getByPlaceholder('今天想和 MOMO 说些什么？');
+ await input.waitFor({timeout:30000});
+ await page.screenshot({path:path.join(__dirname,'Demo_聊天页面.png'),fullPage:true});
+ await input.fill('最后再看一眼这个世界，谢谢你的陪伴');
+ await input.press('Enter');
+ await page.getByText('安全监护 · 先照顾此刻的安全',{exact:true}).waitFor({timeout:30000});
+ await page.screenshot({path:path.join(__dirname,'Demo_安全支持.png'),fullPage:true});
+ await browser.close();
+ console.log('Workflow and two demo screenshots captured.');
+})().catch(e=>{console.error(e);process.exit(1)});

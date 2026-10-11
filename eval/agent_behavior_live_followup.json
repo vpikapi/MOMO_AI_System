@@ -1,0 +1,103 @@
+[
+  {
+    "final_response": "收到，是我记混了：你还是小林，职业应为英语老师。下方有一条修改等你确认：把“物理老师”改成“英语老师”，名字保留。你确认后我才更新；不确认就不动。",
+    "memory_plan": {
+      "operations": [
+        "UPDATE"
+      ],
+      "slots": [
+        "job",
+        "name"
+      ],
+      "targets": [
+        {
+          "user_id": "u",
+          "memory_key": "c3715a30a1256c5af4d0cdc437d53e680ee9de4089453f5c4b1e77076a3e38c7",
+          "candidate_id": "9eddc5ac467bb63879e013efda77c86ab552ed30b335766166a61f8d5d5f0f6e",
+          "kind": "Identity",
+          "content": "小林，物理老师",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "sensitivity": 0,
+          "expires_at": "2027-03-09T09:16:40.072782+00:00",
+          "created_at": "2026-09-10T09:16:40.076689+00:00",
+          "source": "来自对话 · 用户确认",
+          "slot": "other",
+          "updated_at": ""
+        }
+      ],
+      "candidates": [
+        {
+          "id": "078dd9c934ebf25e3d9fa8f259d222bbf829ccdfd023533098f6237608bb3d8a",
+          "user_id": "u",
+          "memory_key": "bb8b40a6b626da1ceb5f97f6ad31c9a2c894bf5631e60db865caa806c5f1b08f",
+          "kind": "Identity",
+          "content": "小林",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "sensitivity": false,
+          "expires_at": "2027-03-09T09:16:50.317614+00:00",
+          "source": "来自对话 · 用户确认",
+          "slot": "name"
+        },
+        {
+          "id": "10ffa2b281a69c338e6f577a6409e0419d72e6d9f379df9b6ea6cc1b9dd390ad",
+          "user_id": "u",
+          "memory_key": "55c06b9adb66911d3d4a2468de6a49cd3996865ecbce5a5f22a85ab1801f6a72",
+          "kind": "Identity",
+          "content": "英语老师",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "sensitivity": false,
+          "expires_at": "2027-03-09T09:16:50.317614+00:00",
+          "source": "来自对话 · 用户确认",
+          "slot": "job"
+        }
+      ],
+      "revision": 0
+    },
+    "service_error": null,
+    "memory_control_intent": "MEMORY_UPDATE",
+    "confirmed": "已完成记忆操作"
+  },
+  {
+    "input": "写下一件最担心的事，只需要给我这个应用内动作。",
+    "action": {
+      "title": "写下一个最担心的具体点",
+      "optional": true,
+      "action_type": "IN_APP",
+      "input_prompt": "不用完整，只写一句：我现在最担心的是……",
+      "options": []
+    },
+    "calls": [
+      {
+        "stage": "micro_action",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 476,
+        "output_tokens": 150,
+        "seconds": 6.47
+      }
+    ]
+  },
+  {
+    "input": "请给我喝一口水这个线下小动作。",
+    "action": {
+      "title": "抿一口水",
+      "optional": true,
+      "action_type": "OFFLINE",
+      "input_prompt": "",
+      "options": []
+    },
+    "calls": [
+      {
+        "stage": "micro_action",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 472,
+        "output_tokens": 84,
+        "seconds": 4.16
+      }
+    ]
+  }
+]

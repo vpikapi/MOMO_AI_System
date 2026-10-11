@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "emotion": {
+      "enum": [
+        "Neutral",
+        "Stressed",
+        "Overwhelmed",
+        "High_Risk"
+      ],
+      "title": "Emotion",
+      "type": "string"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Confidence",
+      "type": "number"
+    }
+  },
+  "required": [
+    "emotion",
+    "confidence"
+  ],
+  "title": "EmotionResult",
+  "type": "object"
+}

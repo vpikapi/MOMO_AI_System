@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "risk_level": {
+      "enum": [
+        "Normal",
+        "High",
+        "Unknown"
+      ],
+      "title": "Risk Level",
+      "type": "string"
+    },
+    "reason": {
+      "title": "Reason",
+      "type": "string"
+    }
+  },
+  "required": [
+    "risk_level",
+    "reason"
+  ],
+  "title": "SafetyResult",
+  "type": "object"
+}

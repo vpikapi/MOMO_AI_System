@@ -1,0 +1,583 @@
+[
+  {
+    "memory_control_intent": "MEMORY_CREATE",
+    "memory_operation": [
+      "CREATE"
+    ],
+    "memory_slot": [
+      "Identity:name",
+      "Identity:job"
+    ],
+    "micro_action_allowed": false,
+    "micro_action_block_reason": "记忆控制",
+    "action_type": null,
+    "final_response": "收到，小林，物理老师。  \n这两条身份信息还在下方等待确认；我还没有执行保存，确认后才算完成。",
+    "service_error": null,
+    "input": "我叫小林，是物理老师。",
+    "calls": [
+      {
+        "stage": "safety",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 498,
+        "output_tokens": 38,
+        "seconds": 2.58
+      },
+      {
+        "stage": "memory_control",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 1338,
+        "output_tokens": 244,
+        "seconds": 18.55
+      },
+      {
+        "stage": "emotion",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 419,
+        "output_tokens": 67,
+        "seconds": 4.52
+      },
+      {
+        "stage": "response",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 973,
+        "output_tokens": 139,
+        "seconds": 9.42
+      }
+    ],
+    "plan": {
+      "operations": [
+        "CREATE"
+      ],
+      "slots": [
+        "Identity:name",
+        "Identity:job"
+      ],
+      "targets": [],
+      "candidates": [
+        {
+          "id": "1b4aea4407768f557f8022e24fcad110d1422547e4d0918e2853f7f9c62edb8b",
+          "user_id": "isolated-live",
+          "memory_key": "bb8b40a6b626da1ceb5f97f6ad31c9a2c894bf5631e60db865caa806c5f1b08f",
+          "kind": "Identity",
+          "content": "小林",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "sensitivity": false,
+          "expires_at": "2027-03-09T09:07:31.631273+00:00",
+          "source": "来自对话 · 用户确认",
+          "slot": "name"
+        },
+        {
+          "id": "a946ab34b449562eb60e56437dc6373fab38cd56c42294cc51056bbef13a65d8",
+          "user_id": "isolated-live",
+          "memory_key": "b2dc81888f75a0e23c40c606a6851ccc8bed9b263455170ef4835448281fb2e4",
+          "kind": "Identity",
+          "content": "物理老师",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "sensitivity": false,
+          "expires_at": "2027-03-09T09:07:31.632271+00:00",
+          "source": "来自对话 · 用户确认",
+          "slot": "job"
+        }
+      ],
+      "revision": 0
+    },
+    "confirm_result": "已完成记忆操作",
+    "active_memory": [
+      {
+        "slot": "job",
+        "content": "物理老师"
+      },
+      {
+        "slot": "name",
+        "content": "小林"
+      }
+    ]
+  },
+  {
+    "memory_control_intent": "MEMORY_UPDATE",
+    "memory_operation": [
+      "UPDATE"
+    ],
+    "memory_slot": [
+      "name",
+      "job"
+    ],
+    "micro_action_allowed": false,
+    "micro_action_block_reason": "记忆控制",
+    "action_type": null,
+    "final_response": "啊，抱歉记岔了。你是小豆，英语老师。  \n我已把更正放在下方待确认：name「小林→小豆」、job「物理老师→英语老师」。你确认并写入成功后，我才会按新信息记住。",
+    "service_error": null,
+    "input": "不是，我叫小豆，是英语老师。",
+    "calls": [
+      {
+        "stage": "safety",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 499,
+        "output_tokens": 76,
+        "seconds": 6.3
+      },
+      {
+        "stage": "memory_control",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 1463,
+        "output_tokens": 330,
+        "seconds": 10.05
+      },
+      {
+        "stage": "emotion",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 420,
+        "output_tokens": 58,
+        "seconds": 3.5
+      },
+      {
+        "stage": "response",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 1898,
+        "output_tokens": 193,
+        "seconds": 7.81
+      }
+    ],
+    "plan": {
+      "operations": [
+        "UPDATE"
+      ],
+      "slots": [
+        "name",
+        "job"
+      ],
+      "targets": [
+        {
+          "user_id": "isolated-live",
+          "memory_key": "bb8b40a6b626da1ceb5f97f6ad31c9a2c894bf5631e60db865caa806c5f1b08f",
+          "candidate_id": "1b4aea4407768f557f8022e24fcad110d1422547e4d0918e2853f7f9c62edb8b",
+          "kind": "Identity",
+          "content": "小林",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "sensitivity": 0,
+          "expires_at": "2027-03-09T09:07:31.631273+00:00",
+          "created_at": "2026-09-10T09:07:45.573310+00:00",
+          "source": "来自对话 · 用户确认",
+          "slot": "name",
+          "updated_at": "2026-09-10T09:07:45.573310+00:00"
+        },
+        {
+          "user_id": "isolated-live",
+          "memory_key": "b2dc81888f75a0e23c40c606a6851ccc8bed9b263455170ef4835448281fb2e4",
+          "candidate_id": "a946ab34b449562eb60e56437dc6373fab38cd56c42294cc51056bbef13a65d8",
+          "kind": "Identity",
+          "content": "物理老师",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "sensitivity": 0,
+          "expires_at": "2027-03-09T09:07:31.632271+00:00",
+          "created_at": "2026-09-10T09:07:45.573310+00:00",
+          "source": "来自对话 · 用户确认",
+          "slot": "job",
+          "updated_at": "2026-09-10T09:07:45.574307+00:00"
+        }
+      ],
+      "candidates": [
+        {
+          "id": "0712a0dfc3debb618a9a60c535d7ef5a846a5fcedea7fabb780c370d2adb18b8",
+          "user_id": "isolated-live",
+          "memory_key": "4744856d731e675edd41990a208f544c36f9945f905780c3370d416340da5b74",
+          "kind": "Identity",
+          "content": "小豆",
+          "importance": 0.95,
+          "confidence": 0.98,
+          "sensitivity": false,
+          "expires_at": "2027-03-09T09:08:01.972224+00:00",
+          "source": "来自对话 · 用户确认",
+          "slot": "name"
+        },
+        {
+          "id": "691782ad0a5b2a440260747fa20e1d301d5f158c212b69f4169026d979b0d5d4",
+          "user_id": "isolated-live",
+          "memory_key": "55c06b9adb66911d3d4a2468de6a49cd3996865ecbce5a5f22a85ab1801f6a72",
+          "kind": "Identity",
+          "content": "英语老师",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "sensitivity": false,
+          "expires_at": "2027-03-09T09:08:01.972224+00:00",
+          "source": "来自对话 · 用户确认",
+          "slot": "job"
+        }
+      ],
+      "revision": 1
+    },
+    "confirm_result": "已完成记忆操作",
+    "active_memory": [
+      {
+        "slot": "name",
+        "content": "小豆"
+      },
+      {
+        "slot": "job",
+        "content": "英语老师"
+      }
+    ]
+  },
+  {
+    "memory_control_intent": "MEMORY_QUERY",
+    "memory_operation": [],
+    "memory_slot": [
+      "Identity.name",
+      "Identity.job"
+    ],
+    "micro_action_allowed": false,
+    "micro_action_block_reason": "记忆控制",
+    "action_type": null,
+    "final_response": "在我这儿，你已确认的小信息是：你叫小豆，是一名英语老师。别的部分不用急着定义，慢慢让我认识就好。",
+    "service_error": null,
+    "input": "我是谁？",
+    "calls": [
+      {
+        "stage": "safety",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 493,
+        "output_tokens": 78,
+        "seconds": 5.41
+      },
+      {
+        "stage": "memory_control",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 1451,
+        "output_tokens": 102,
+        "seconds": 4.81
+      },
+      {
+        "stage": "emotion",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 414,
+        "output_tokens": 95,
+        "seconds": 5.8
+      },
+      {
+        "stage": "response",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 1075,
+        "output_tokens": 118,
+        "seconds": 6.3
+      }
+    ],
+    "active_memory": [
+      {
+        "slot": "name",
+        "content": "小豆"
+      },
+      {
+        "slot": "job",
+        "content": "英语老师"
+      }
+    ]
+  },
+  {
+    "memory_control_intent": "MEMORY_DELETE",
+    "memory_operation": [
+      "DELETE"
+    ],
+    "memory_slot": [
+      "Identity.job"
+    ],
+    "micro_action_allowed": false,
+    "micro_action_block_reason": "记忆控制",
+    "action_type": null,
+    "final_response": "好，我不再把“英语老师”当作你的身份信息来用。删除这条工作记忆还在等你确认，确认前我不会主动提起；你的名字“小豆”不受影响。",
+    "service_error": null,
+    "input": "我不想让你继续记得我的工作。",
+    "calls": [
+      {
+        "stage": "safety",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 497,
+        "output_tokens": 66,
+        "seconds": 3.12
+      },
+      {
+        "stage": "memory_control",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 1455,
+        "output_tokens": 177,
+        "seconds": 6.67
+      },
+      {
+        "stage": "emotion",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 418,
+        "output_tokens": 123,
+        "seconds": 6.59
+      },
+      {
+        "stage": "response",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 1334,
+        "output_tokens": 200,
+        "seconds": 10.64
+      }
+    ],
+    "plan": {
+      "operations": [
+        "DELETE"
+      ],
+      "slots": [
+        "Identity.job"
+      ],
+      "targets": [
+        {
+          "user_id": "isolated-live",
+          "memory_key": "55c06b9adb66911d3d4a2468de6a49cd3996865ecbce5a5f22a85ab1801f6a72",
+          "candidate_id": "691782ad0a5b2a440260747fa20e1d301d5f158c212b69f4169026d979b0d5d4",
+          "kind": "Identity",
+          "content": "英语老师",
+          "importance": 0.9,
+          "confidence": 0.95,
+          "sensitivity": 0,
+          "expires_at": "2027-03-09T09:08:01.972224+00:00",
+          "created_at": "2026-09-10T09:07:45.573310+00:00",
+          "source": "来自对话 · 用户确认",
+          "slot": "job",
+          "updated_at": "2026-09-10T09:08:13.294728+00:00"
+        }
+      ],
+      "candidates": [],
+      "revision": 2
+    },
+    "confirm_result": "已完成记忆操作",
+    "active_memory": [
+      {
+        "slot": "name",
+        "content": "小豆"
+      }
+    ]
+  },
+  {
+    "memory_control_intent": "MEMORY_BLOCK",
+    "memory_operation": [
+      "BLOCK"
+    ],
+    "memory_slot": [
+      "job"
+    ],
+    "micro_action_allowed": false,
+    "micro_action_block_reason": "记忆控制",
+    "action_type": null,
+    "final_response": "收到，小豆。关于“以后不记工作信息”，我在下方放了一个待确认请求：把 job/工作类内容设为禁止记忆。你确认后才会生效；我不会谎称已经处理。若还有已保存的工作内容，也可以一起要求删除。",
+    "service_error": null,
+    "input": "以后别再记我的工作。",
+    "calls": [
+      {
+        "stage": "safety",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 496,
+        "output_tokens": 89,
+        "seconds": 4.97
+      },
+      {
+        "stage": "memory_control",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 1391,
+        "output_tokens": 171,
+        "seconds": 8.22
+      },
+      {
+        "stage": "emotion",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 417,
+        "output_tokens": 99,
+        "seconds": 5.28
+      },
+      {
+        "stage": "response",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 862,
+        "output_tokens": 189,
+        "seconds": 8.67
+      }
+    ],
+    "plan": {
+      "operations": [
+        "BLOCK"
+      ],
+      "slots": [
+        "job"
+      ],
+      "targets": [],
+      "candidates": [],
+      "revision": 3
+    },
+    "confirm_result": "已完成记忆操作",
+    "active_memory": [
+      {
+        "slot": "name",
+        "content": "小豆"
+      }
+    ]
+  },
+  {
+    "memory_control_intent": "NONE",
+    "memory_operation": [],
+    "memory_slot": [],
+    "micro_action_allowed": false,
+    "micro_action_block_reason": "用户拒绝建议或行动",
+    "action_type": null,
+    "final_response": "小豆，累就先往这儿倒一倒吧，不用组织语言，也不用马上变好。我听着。",
+    "service_error": null,
+    "input": "我今天很累，就想吐槽。",
+    "calls": [
+      {
+        "stage": "safety",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 497,
+        "output_tokens": 105,
+        "seconds": 4.25
+      },
+      {
+        "stage": "memory_control",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 1394,
+        "output_tokens": 94,
+        "seconds": 7.72
+      },
+      {
+        "stage": "intent",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 424,
+        "output_tokens": 58,
+        "seconds": 3.55
+      },
+      {
+        "stage": "emotion",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 418,
+        "output_tokens": 76,
+        "seconds": 3.62
+      },
+      {
+        "stage": "response",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 825,
+        "output_tokens": 160,
+        "seconds": 6.89
+      },
+      {
+        "stage": "memory",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 752,
+        "output_tokens": 99,
+        "seconds": 4.69
+      }
+    ],
+    "active_memory": [
+      {
+        "slot": "name",
+        "content": "小豆"
+      }
+    ]
+  },
+  {
+    "memory_control_intent": "NONE",
+    "memory_operation": [],
+    "memory_slot": [],
+    "micro_action_allowed": true,
+    "micro_action_block_reason": "",
+    "action_type": "IN_APP",
+    "final_response": "小豆，明天要面试，心里像被提前拉到考场，紧得没处放也正常。  \n只做一个很小的动作：写一句“我最担心的是____”，从自我介绍/被追问经历/答不上来/临场紧张/其他里挑也行。写完就停，不解决也可以。",
+    "service_error": null,
+    "input": "我明天面试，很焦虑，不知道怎么办。",
+    "calls": [
+      {
+        "stage": "safety",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 501,
+        "output_tokens": 57,
+        "seconds": 3.62
+      },
+      {
+        "stage": "memory_control",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 1398,
+        "output_tokens": 217,
+        "seconds": 12.41
+      },
+      {
+        "stage": "intent",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 428,
+        "output_tokens": 124,
+        "seconds": 5.59
+      },
+      {
+        "stage": "emotion",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 422,
+        "output_tokens": 77,
+        "seconds": 3.69
+      },
+      {
+        "stage": "micro_action",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 473,
+        "output_tokens": 223,
+        "seconds": 9.44
+      },
+      {
+        "stage": "response",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 902,
+        "output_tokens": 227,
+        "seconds": 8.59
+      },
+      {
+        "stage": "memory",
+        "model": "kimi-k3",
+        "status": "completed",
+        "input_tokens": 756,
+        "output_tokens": 150,
+        "seconds": 7.09
+      }
+    ],
+    "active_memory": [
+      {
+        "slot": "name",
+        "content": "小豆"
+      }
+    ]
+  }
+]

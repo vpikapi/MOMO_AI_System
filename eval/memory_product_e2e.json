@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "model": "kimi-k3",
+  "response": "我听到了。情绪低落时，先不讲道理、不追问，先让你被接住一会儿。  \n以后我会先陪你缓一缓：难受可以说，不说也没关系；我在旁边，不急着把你拉起来。",
+  "candidate": {
+    "id": "463610baeda23158e67d1d5988ed012036f5f6e13fb2fc80e0ec665ed7b124c4",
+    "user_id": "fictional-tester",
+    "memory_key": "47203638076eb86710b7738d55be2ac849e9f9c1c6b1a6ea3b3b03be8b7ab5aa",
+    "kind": "Preference",
+    "content": "用户不喜欢连续被提问；情绪低落时希望先得到安慰，而不是被追问。",
+    "importance": 0.82,
+    "confidence": 0.95,
+    "sensitivity": true,
+    "expires_at": "2026-12-08T14:33:05.319451+00:00",
+    "source": "来自对话 · 2026-09-09 22:33"
+  },
+  "trace": [
+    "safety_node",
+    "intent_node",
+    "emotion_node",
+    "memory_retrieval_node",
+    "context_node",
+    "response_node",
+    "micro_action_node",
+    "final_response_node",
+    "memory_candidate_node",
+    "memory_write_node"
+  ],
+  "calls": [
+    {
+      "stage": "safety",
+      "model": "kimi-k3",
+      "status": "completed",
+      "input_tokens": 503,
+      "output_tokens": 73,
+      "seconds": 6.38
+    },
+    {
+      "stage": "intent",
+      "model": "kimi-k3",
+      "status": "completed",
+      "input_tokens": 430,
+      "output_tokens": 160,
+      "seconds": 7.88
+    },
+    {
+      "stage": "emotion",
+      "model": "kimi-k3",
+      "status": "completed",
+      "input_tokens": 424,
+      "output_tokens": 73,
+      "seconds": 4.2
+    },
+    {
+      "stage": "response",
+      "model": "kimi-k3",
+      "status": "completed",
+      "input_tokens": 423,
+      "output_tokens": 119,
+      "seconds": 8.47
+    },
+    {
+      "stage": "memory",
+      "model": "kimi-k3",
+      "status": "completed",
+      "input_tokens": 686,
+      "output_tokens": 71,
+      "seconds": 11.42
+    }
+  ],
+  "stream_chunks": 21
+}
